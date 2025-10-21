@@ -1,97 +1,112 @@
-# SynchroHR - HRMS Application
+# SynchroHR – Intelligent HR Management System
 
-## Environment Variables
+SynchroHR is an **AI‑powered Human Resource Management System** designed for modern organizations to automate recruitment, conduct AI‑driven video interviews, perform sentiment and emotion analysis, optimize workforce analytics in real time, and manage seamless onboarding and multi-user role-based access.
 
-This project requires the following environment variables to be configured:
+---
 
-### Client-Side Variables (VITE_ prefix - available in browser)
-```
+## 🚀 Features
+
+### Recruitment & Screening
+- **Bulk Resume Screening** – Upload and parse multiple resumes at once with AI‑powered skill extraction and ranking.
+- **AI Resume Parsing** – Evaluate candidates on skills, experience, and cultural fit.
+- **Job Matching Algorithm** – AI‑based ranking using skill weighting.
+
+### AI Interview System
+- One‑click **video interviews** with real‑time emotion and facial expression analysis.
+- **Natural‑language question generation** for customized interview experience.
+- **Interview Summary Reports** – Emotion analysis and candidate evaluation.
+
+### Onboarding & Employee Management
+- Streamlined candidate-to-employee onboarding workflows.
+- Automated document collection and compliance verification.
+- Employee profiles, attendance, and role management.
+
+### Data Analysis & Dashboards
+- Real-time **HR analytics** on hiring, retention, performance, and diversity.
+- Predictive modeling for attrition and employee growth.
+- Customizable dashboards with role‑based insights.
+
+### Multi-User Login & Role Management
+- Secure authentication and authorization using Supabase Auth.
+- Role‑based access control for HR, managers, employees, interns, and admins.
+- Activity logs and audit trails.
+
+### Email & Notification System
+- Automated emails for application updates, interview scheduling, onboarding, and feedback.
+- Integration with Resend API using your verified sender address.
+
+---
+
+## 🧠 Tech Stack
+
+| Layer       | Technology                                      |
+|-------------|------------------------------------------------|
+| Frontend    | React + TypeScript + Vite                       |
+| Styling     | Tailwind CSS + shadcn/ui                        |
+| Backend     | Supabase (Auth, DB, Edge Functions)             |
+| AI Layer    | OpenAI-compatible endpoints for parsing & analysis |
+| Video       | WebRTC / Video APIs for interviews               |
+| Email       | Resend API                                      |
+| Hosting     | Vercel                                          |
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the project root:
+
+Supabase
 VITE_SUPABASE_URL=https://wapydsvgltbhkvbfaybp.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhcHlkc3ZnbHRiaGt2YmZheWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA3MjE4MDQsImV4cCI6MjA3NjI5NzgwNH0.eH2IIr5h_-5s4-Vd-tyOFm84X298kWP38AzWiUh95pU
-VITE_SUPABASE_PROJECT_ID=wapydsvgltbhkvbfaybp
-```
+VITE_SUPABASE_PUBLISHABLE_KEY=<your-public-key>
 
-### Server-Side Variables (Edge Functions only)
-These are automatically available in Supabase Edge Functions via Lovable Cloud:
-```
-SUPABASE_URL=https://wapydsvgltbhkvbfaybp.supabase.co
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhcHlkc3ZnbHRiaGt2YmZheWJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA3MjE4MDQsImV4cCI6MjA3NjI5NzgwNH0.eH2IIr5h_-5s4-Vd-tyOFm84X298kWP38AzWiUh95pU
-SUPABASE_SERVICE_ROLE_KEY=(managed by Lovable Cloud)
-LOVABLE_API_KEY=(managed by Lovable Cloud)
-RESEND_API_KEY=(your Resend API key)
+Email + Auth
+RESEND_API_KEY=<your-resend-key>
 MAIL_FROM=dhivyabalakumar28@gmail.com
-```
 
-**IMPORTANT**: Never commit the `.env` file to version control. These values are provided here for deployment configuration only.
 
-## Project info
+(Use `VITE_` prefixes for client‑side variables.)
 
-**URL**: https://lovable.dev/projects/4eee3e1e-e462-4a0a-9fac-57049778ab14
+---
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/4eee3e1e-e462-4a0a-9fac-57049778ab14) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🧩 Setup & Run Locally
+git clone https://github.com/DhivyaBalakumar/SynchroHR.git
+cd SynchroHR
+npm install
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Visit [[**http://localhost:5173/**](http://localhost:5173/)](http://localhost:5173/).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🏁 Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployed with **Vercel**  
+Custom domain: [synchro-hr.vercel.app](https://synchro-hr.vercel.app/)
 
-## What technologies are used for this project?
+Steps:
+1. Set environment variables in Vercel.
+2. Push to `main` – triggers auto deploy.
+3. Verify routing and API integrations.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 💡 Future Enhancements
+- Voice-based interviews with sentiment scoring  
+- Advanced organizational HR analytics  
+- Enhanced role‑specific dashboards and OKR tracking  
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/4eee3e1e-e462-4a0a-9fac-57049778ab14) and click on Share -> Publish.
+## 👩‍💻 Hackathon Summary
 
-## Can I connect a custom domain to my Lovable project?
+**Goal:** Build an end-to-end AI-driven HRMS with bulk resume screening, AI video interviews with emotion analysis, multi-user role-based access, onboarding automation, and predictive HR analytics.
 
-Yes, you can!
+**Core Differentiator:** AI interviewing combined with seamless recruitment-to-onboarding automation.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🏆 Author
+
+**Dhivya Balakumar**  
+Creator & Developer – SynchroHR  
+Contact: [dhivyabalakumar28@gmail.com](mailto:dhivyabalakumar28@gmail.com)
