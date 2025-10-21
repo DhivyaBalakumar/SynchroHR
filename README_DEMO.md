@@ -1,4 +1,4 @@
-# Synchro HR Platform - Hackathon Demo Script
+# Synchro HR Platform - Hackathon Demo
 
 ## 🎯 Purpose
 This automated demo script showcases every feature of the Synchro HR platform for hackathon presentation. It provides a comprehensive walkthrough of all capabilities built into the application.
@@ -246,4 +246,3 @@ If you encounter issues during setup or execution, check:
 
 ---
 
-**Good luck with your hackathon! 🚀**
