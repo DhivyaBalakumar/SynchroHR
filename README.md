@@ -91,7 +91,6 @@ Steps:
 ---
 
 ## 💡 Future Enhancements
-- Voice-based interviews with sentiment scoring  
 - Advanced organizational HR analytics  
 - Enhanced role‑specific dashboards and OKR tracking  
 
