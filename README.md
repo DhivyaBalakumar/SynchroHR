@@ -61,7 +61,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=<your-public-key>
 
 Email + Auth
 RESEND_API_KEY=<your-resend-key>
-MAIL_FROM=dhivyabalakumar28@gmail.com
+
 
 
 (Use `VITE_` prefixes for client‑side variables.)
